@@ -1,0 +1,72 @@
+"set default color scheme
+color candycode
+
+"use default font 'Source Code Pro from adobe'
+set guifont=monofur:h16
+
+"configure gundo plugin
+let g:gundo_width = 60
+let g:gundo_preview_height = 40
+let g:gundo_right = 1
+let g:gundo_close_on_revert = 1
+
+"configure Rainbow Parentheses Plugin
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+"Simple config for EasyMotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap s <Plug>(easymotion-s2)
+let g:EasyMotion_smartcase = 1
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+let g:EasyMotion_startofline = 0
+
+"mapping for NERDTreeTabs
+map <C-n>       <Plug>NERDTreeTabsToggle<CR>
+map <C-f>       <Plug>NERDTreeFocusToggle<CR>
+map <D-A-Right> :tabn<CR>
+map <D-A-Left>  :tabp<CR>
+
+"configure gitgutter
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
+
+"configure project plugin
+let g:nerdtree_tabs_open_on_gui_startup = 0
+let g:project_use_nerdtree = 1
+set rtp+=~/.janus/vim-project/
+call project#rc("~/Projects/aviasales")
+
+Project 'search'
+
+Project 'jetradar'
+
+Project 'jetradar_whitelabel'
+
+Project 'yasen'
+
+Project '~/'            , 'dotfiles'
+
+Project '~/.janus', 'janus-custom-packages'
+
+Project '~/Projects/jujubecat'   , 'jujubecat'
+
+File '~/.gvimrc.after' , 'gvimrc.after'
+File '~/.gvimrc.before', 'gvimrc.before'
+File '~/.vimrc.after'  , 'vimrc.after'
+File '~/.vimrc.before' , 'vimrc.before'
+
+
+"set autosave for instant
+let g:auto_save = 0  " enable AutoSave on Vim startup
+let g:auto_save_no_updatetime = 0  " do not change the 'updatetime' option
+
