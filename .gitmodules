@@ -79,3 +79,9 @@
 [submodule "vim-surround"]
 	path = vim-surround
 	url = git@github.com:tpope/vim-surround.git
+[submodule "tagbar"]
+	path = tagbar
+	url = git://github.com/majutsushi/tagbar
+[submodule "CoffeeTags"]
+	path = CoffeeTags
+	url = git@github.com:lukaszkorecki/CoffeeTags.git

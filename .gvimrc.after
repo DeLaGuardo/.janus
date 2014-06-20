@@ -70,3 +70,27 @@ File '~/.vimrc.before' , 'vimrc.before'
 let g:auto_save = 0  " enable AutoSave on Vim startup
 let g:auto_save_no_updatetime = 0  " do not change the 'updatetime' option
 
+"Configure CTags
+"CoffeeScript
+let g:CoffeeAutoDisabled = 0        " Disables autotaging on save (Default: 0 [false])
+"let g:CoffeeAutoTagFile = <filename>       " Name of the generated tag file (Default: ./tags)
+let g:CoffeeAutoTagIncludeVars = 1  " Includes variables (Default: 0 [false])
+let g:CoffeeAutoTagTagRelative = 1  " Sets file names to the relative path from the tag file location to the tag file location (Default: 1 [true])
+"CSS
+let g:tagbar_type_css = {
+\ 'ctagstype' : 'Css',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 's:selectors',
+        \ 'i:identities'
+    \ ]
+\ }
+"Clojure,ClojureScript
+let g:tagbar_type_clojure = {
+\ 'ctagstype' : 'clojure',
+    \ 'kinds'     : [
+        \ 'n:namespaces',
+        \ 'd:variables',
+        \ 'f:functions'
+    \ ]
+\ }
